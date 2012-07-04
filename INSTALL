@@ -1,0 +1,39 @@
+
+How to install GGH
+========================================
+
+  Basics
+  ------
+
+    Building GGH is typically just the running of "make"
+    
+    Before you can build GGH, you need to have:
+       1. C Compiler
+       2. At least GSL-1.14
+    
+    Once install, run "make" in the trunk.
+
+  Pre-requirements
+  -----------------
+
+    * C Compiler
+        1. sudo apt-get update
+        2. sudo apt-get install build-essential
+        3. sudo apt-get install gcc
+
+
+    * Installing GSL-1.14
+	 (file downloaded from http://mirror.csclub.uwaterloo.ca/gnu/gsl/)
+	Under the Download folder gsl-1.14.tar.gz is located
+    	    1. tar -xzf gsl-1.14.tar.gz
+    	    2. cd gsl-1.14
+    	    3. ./configure
+    	    4.  make (if any problems are encountered type “make clean”)
+            5.  sudo make install
+
+
+  Pre-requirements
+  -----------------
+	For testing functions in the test folder, compile these using
+		gcc -Wall -o <TEST> <TEST>.c -lgsl -lgslcblas -lm
+	where <TEST> is the file name.
